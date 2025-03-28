@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ResourceController;
 use Illuminate\Support\Facades\Route;
-use phpDocumentor\Reflection\Types\Resource_;
 
 Route::get('/', function () {
     return view('home');
@@ -19,11 +17,9 @@ Route::get('/about', function () {
 
 Route::get('/product', [ResourceController::class, 'index'])->name('product');
 
+Route::resource('products', ResourceController::class)->only(['store', 'destroy']);
+
 Route::get('/store', function () {
     return view('store'); 
 })->name('store');
 
-Route::delete('/products/{id}', [ResourceController::class, 'destroy'])->name('products.destroy');
-
-
-// Route::get('/products', [ResourceController::class, 'index']);

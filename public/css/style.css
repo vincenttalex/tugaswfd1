@@ -13,12 +13,13 @@ body {
     background: rgba(0, 0, 0, 0.5);
     color: white;
 }
+
 .card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  height: 400px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
 }
+
 
 .card:hover {
   transform: scale(1.05);
@@ -51,6 +52,17 @@ body {
 .card:hover .card-body {
   opacity: 1;
 }
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-body .d-flex {
+  margin-top: auto; /* Push buttons to the bottom */
+}
+
 /* Floating Button Styles */
 .floating-btn {
   position: fixed;
@@ -4303,6 +4315,11 @@ textarea.form-control-lg {
   margin-bottom: 0;
 }
 
+.card-text {
+  max-height: 80px;
+  overflow-y: auto;
+}
+
 .card-link + .card-link {
   margin-left: var(--bs-card-spacer-x);
 }
@@ -4352,6 +4369,11 @@ textarea.form-control-lg {
   left: 0;
   padding: var(--bs-card-img-overlay-padding);
   border-radius: var(--bs-card-inner-border-radius);
+}
+
+.card-img-top {
+  height: 180px; /* Adjust as needed */
+  object-fit: cover; /* Ensures image fills the space without distortion */
 }
 
 .card-img,
