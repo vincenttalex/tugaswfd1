@@ -17,7 +17,9 @@ Route::get('/about', function () {
 
 Route::get('/product', [ResourceController::class, 'index'])->name('product');
 
-Route::resource('products', ResourceController::class)->only(['store', 'destroy']);
+Route::get('/products/{id}', [ResourceController::class, 'show']);
+
+Route::resource('products', ResourceController::class)->only(['store', 'destroy', 'update']);
 
 Route::get('/store', function () {
     return view('store'); 

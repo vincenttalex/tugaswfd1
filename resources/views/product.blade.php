@@ -14,8 +14,8 @@
                         </p>
                         <h5 class="card-text text-white" style="font-weight: bold;">Rp. {{ $product->price }}</h5>
                         <div class="d-flex justify-content-between">
-                            <a href="" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger delete-btn" data-id="{{ $product->id }}" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</a>
+                            <a href="" class="btn btn-primary edit-btn" data-id="{{ $product->id }}" data-bs-toggle="modal" data-bs-target="#editModal">Edit</a>
+                            <a href="" class="btn btn-danger delete-btn" data-id="{{ $product->id }}" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</a>
                         </div>
                     </div>
                 </div>
